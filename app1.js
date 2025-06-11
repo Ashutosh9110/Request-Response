@@ -38,21 +38,17 @@ const server = http.createServer((req, res) => {
 
         const formValues = formData.split("=")[1]
 
-        fs.writeFile("formValues.txt", formValues, (err) => {
+        const decodedMessage = decodeURIComponent(formValues);
+
+
+        fs.writeFile("formValues.txt", decodedMessage, (err) => {
           res.statusCode = 302  
           res.setHeader("Location", "/")
           res.end()
         })
-
-
-
       })
-
-
-    }
+    } 
   }
-
-
 })
 
 server.listen(port, () => {

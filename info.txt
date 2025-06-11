@@ -1,0 +1,1 @@
+Middleware: In an express application, Middleware serves as a set of functions that runs between the incoming request from a client and the final response sent by server.
