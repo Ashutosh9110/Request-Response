@@ -2,17 +2,20 @@ const express = require("express")
 const router = express.Router()
 
 
-router.get("/users", (req, res) => {
+router.get("/", (req, res) => {
   res.send("Fetching all users")
 })
 
-router.post("/users", (req, res) => {
+router.post("/", (req, res) => {
   res.send("Adding a new user")
 })
 
-router.get("/users/:id", (req, res) => {
-  const id = req.params.id
-  res.send(`Fetching user with ID: ${id}`)
-})
+router.get("/:id", (req, res) => {
+
+  console.log(req.params.id);
+  
+  res.send(`User ID is ${req.params.id}`);
+  
+  });
 
 module.exports = router
