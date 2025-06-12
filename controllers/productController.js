@@ -13,12 +13,12 @@ const addNewProduct = (req, res) => {
 
 const editProduct = (req, res) => {
   const id = req.params.id
-  res.send("Editing the products")
+  res.send(`Editing the product with ID: ${id}`)
 }
 
 const deleteProduct = (req, res) => {
   const id = req.params.id
-  res.send("Deleting the product")
+  res.send(`Deleting the product with ID: ${id}`)
 }
 
 
