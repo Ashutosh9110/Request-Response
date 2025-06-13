@@ -1,17 +1,4 @@
 
-// const express = require("express")
-// const app = express()
-// const PORT = 3000
-// const cartRouter = require("./routes/cart")
-
-
-// app.use("/cart", cartRouter)
-
-
-// app.listen(PORT, () => {
-//   console.log(`Server running on PORT ${PORT}`);
-// })
-
 
 
 const express = require("express")
@@ -21,6 +8,8 @@ const userRouter = require("./routes/user")
 const cartRouter = require("./routes/cart")
 const productRouter = require("./routes/productRoutes")
 
+app.use(express.static("public"))
+app.use(express.json())
 
 
 app.use("/api/users", userRouter)
